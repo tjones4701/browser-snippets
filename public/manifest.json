@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Code Snippets",
+  "version": "0.1.0",
+  "description": "Run your JavaScript snippets on a page and keep their outputs organised by run.",
+  "minimum_chrome_version": "135",
+  "permissions": ["userScripts", "downloads", "storage", "alarms", "activeTab"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_popup": "popup.html", "default_title": "Browser Code Snippets" },
+  "options_ui": { "page": "library.html", "open_in_tab": true },
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'none'" }
+}
